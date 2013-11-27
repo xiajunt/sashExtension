@@ -1,0 +1,24 @@
+The file "eval.c" content fonction for transforming the arithmetic expression into arithmetic tree and fonction for resolving this tree.
+Structure of the tree :
+
+typedef struct arith_tree
+{
+  int type;
+  int num_val;
+  struct arith_tree *left;
+  struct arith_tree *right;
+}arith_tree;
+
+"left" and "right" are pointer for the two children of this node
+"type" define the type of the node, a node can be a number or a operator(+, -, x, /)
+"num_val" is the value of the node if it's a number
+
+Possible error :
+
+_Division by 0, not deal yet, so don't use it please
+_Wrong formulate expression, if the expression is not well formulate, the program will ignore the command and show a message
+
+Warning :
+
+In the program, mult "*" is replaced by "x" and "[]" is replaced by "()"
+ 
